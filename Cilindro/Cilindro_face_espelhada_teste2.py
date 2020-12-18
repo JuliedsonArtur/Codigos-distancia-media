@@ -5,7 +5,7 @@ Created on Wed Dec 16 09:13:01 2020
 Memória de São Davi, Rei e Profeta
 @author: juliedson
 """
-# Esse tenta 2*z_max
+# Here we try the 2*z_max option.
 # Code for a cylinder with a mirrored upper face.
 
 import time
@@ -36,16 +36,16 @@ z0 = 1
 while z0 < z_max:
     y0 = -R
     while True:
-        y0+= 1
+        y0+= 10         # Steps for y
         print()
         if y0 < R:
             x0 = -R
             while True:
-                x0 += 1
+                x0 += 10        # Steps for x
                 if x0 < R:
                     print(f'For P = ({x0:.2f}, {y0:.2f}, {z0:.2f}):', end=' ')
                     if x0**2 + y0**2 < R**2:               # To remove |x| > R
-                        for theta in range(0, 181, 200):
+                        for theta in range(0, 181, 18):
                             phi = 0
                             if theta == 0:
                                 d += z_max - z0
