@@ -5,7 +5,7 @@ Created on Wed Dec 16 09:42:15 2020
 Memória de São Davi, Rei e Profeta
 @author: juliedson
 """
-# Esse tenta uma expressão analítica para d'. 
+# Analitical and "harder" code. 
 #
 # Code for a cylinder with a mirrored upper face.
 
@@ -30,18 +30,17 @@ d = n = 0
 # However the  height coordinate is restrained in (0, z_max):
 z0 = 1
 
-#Soma incremento delta para theta<theta limite por conta da refleão na fac sup
 # 行きましょうか？
 
 while z0 < z_max:
     y0 = -R
     while True:
-        y0+= 20
+        y0 += 20         # y steps
         print()
         if y0 < R:
             x0 = -R
             while True:
-                x0 += 20
+                x0 += 20        # x steps
                 if x0 < R:
                     print(f'For P = ({x0:.2f}, {y0:.2f}, {z0:.2f}):', end=' ')
                     if x0**2 + y0**2 < R**2:               # To remove |x| > R
